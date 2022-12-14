@@ -286,7 +286,7 @@ hr {
 
 /* about */
 .about {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     margin: 100px 0;
 }
@@ -339,6 +339,7 @@ hr {
     padding: 70px 25px;
     flex: 1 1 0;
     border-left: 1px solid #fff;
+    height: 270px;
     border-color: #b5eae0;
 }
 
@@ -348,6 +349,7 @@ hr {
   
     flex: 1 1 0;
     border-right: 1px solid #fff;
+    height: 270px;
     border-color: #b5eae0;
 }
 .stat__number{
@@ -504,79 +506,128 @@ hr {
     transform: translateY(-50%);
 } 
 
-/* Comment */
-.comment {
+/* Reviews */
+.reviews {
     padding: 0 110px;
     position: relative;
 }
-.comment__item {
-   padding-left: 205px;
+.reviews__item {
+    padding-left: 205px;
     position: relative;
 }
 
-.comment__img {
-    
+.rewiews__photo{
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     z-index: 1;
-    
+    padding: 40px;
+    border: 3px solid #95e1d3;
 }
-.comment__text {
- margin-bottom: 15px;
 
+.reviews__text {
     font-size: 24px;
-    font-style: italic;
-    font-weight: 300;
     color: #999;
-   
+    font-weight: 300;
+    font-style:     italic;
+    margin-bottom: 15px;
 }
-
-.comment__author {
+.reviews__author {
     font-family: 'Kaushan Script', cursive;
     font-size: 24px;
     color: #333;
 }
-
-.comment__author:before {
+.reviews__author:before {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    width: 60px;
     height: 3px;
-    margin-right: 10px;
-
+    width: 60px;
     background-color: #f38181;
+    margin-right: 10px;
 }
 
-.comment__btn {
-    font-size: 0;
+.reveiws__btn {
     color: transparent;
-
+    font-size: 0;
+    
     position: absolute;
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
 }
 
-.comment__btn:after {
+
+.reveiws__btn:after {
     content: "";
-    display: block;
     width: 16px;
     height: 16px;
-
-    border-top: 2px solid #ccc;
-    border-left: 2px solid #ccc;
+    display: block;
+    border-top: 3px solid #999;
+    border-left: 3px solid #999;
+    position: absolute;
+    top: 50%;
+    
+   
 }
 
-.comment__btn--prev {
+.reveiws__btn--prev{
     left: 0;
     transform: rotate(-45deg);
 }
-
-.reviews__btn--next {
+.reveiws__btn--next{
     right: 0;
     transform: rotate(135deg);
 }
 
+/* Team */
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.team__man {
+    width: 380px;
+    background-color: #95e1d3;
+}
+
+.team__man:hover .team__img img {
+    opacity: .1;
+}
+
+.team__man:hover .team__img {
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.team__img {
+    background: linear-gradient(to bottom, #fce28a, #f38181);
+    transition: transform .1s linear;
+}
+
+
+.team__img img {
+    display: block;
+    transition: opacity .1s linear;
+}
+.team__text {
+    margin: 30px 0;
+}
+
+.team__name {
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.team__post {
+    text-align: center;
+    color: #999;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+}
 
