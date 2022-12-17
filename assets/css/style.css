@@ -294,6 +294,7 @@ hr {
 .about__item{
     width: 380px;
     background-color: #95e1d3;
+    position: relative;
 }
 
 .about__item:hover .about__img img {
@@ -313,6 +314,23 @@ hr {
 .about__img img {
     display: block;
     transition: opacity .1s linear;
+}
+
+.about__text {
+    display: block;
+    position: absolute;
+    top: 41%;
+    left: 34%;
+    z-index: 1;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: .1;
+    
+}
+
+.about__item:hover .about__text {
+    opacity: 1;
 }
 
 /* Statistick */
@@ -589,8 +607,11 @@ hr {
 }
 
 .team__man {
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
+    max-height: 470px;
     background-color: #95e1d3;
+    position: relative;
 }
 
 .team__man:hover .team__img img {
@@ -630,4 +651,123 @@ hr {
     font-weight: 300;
     font-style: italic;
 }
+
+.team__social {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: 42%;
+    left: 19%;
+    z-index: 1;
+
+}
+.team__man:hover .team__social {
+    opacity: 1;
+    }
+
+.team__social__element {
+    display: flex;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #fce38a;
+    border-right: 1px solid #f9bd87;
+    color: #f38181;
+    
+}
+.team__social__element:last-child {
+    width: 55px;
+    height: 55px;
+    background-color: #fce38a;
+}
+    .team__social__element:hover {
+    background-color: #f38181;
+    color: #fff;  
+    }
+.fa-brands {
+    transform: translateY(38%);
+}
+.team_button {
+    text-decoration: none;
+}
+
+/* Logo */
+
+.logo {
+    background-color: #f8f8f8;
+}
+.logo__item {
+    margin: 0 auto;
+}
+.logo_board {
+    display: flex;
+    justify-content: center;
+    padding: 90px 0;
+}
+
+/* Works */
+
+.works {
+display: flex;
+    
+}
+
+.works__col {
+    flex: 1 1 0;
+    
+}
+
+.works__item {
+    position: relative;
+    background: linear-gradient(to bottom, #fce28a, #f38181);
+    
+}
+
+.works__item:hover .works__img {
+    opacity: .1;
+}
+
+.works__img {
+    display: block;
+    transition: opacity 0.2s linear;
+}
+
+
+
+.works__info {
+    width: 100%;
+    padding: 0 15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translate3d(0, -50%, 0);
+    text-align: center;
+    color: #fff;
+    
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.works__item:hover .works__info {
+    opacity: 1;
+}
+
+.works__title {
+    
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.works__text {
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+
 
